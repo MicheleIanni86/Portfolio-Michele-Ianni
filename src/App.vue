@@ -43,8 +43,8 @@ export default {
   height: 200%;
   background-image: repeating-linear-gradient(45deg,
       green 1px,
-      rgb(34, 34, 34) 0px,
-      black 10px,
+      rgb(15, 15, 15) 0px,
+      rgb(30, 30, 30) 10px,
       black 20px);
   animation: animate-border 10s linear infinite;
   z-index: 1;
