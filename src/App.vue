@@ -5,45 +5,68 @@ import Footer from "./components/Footer.vue";
 
 export default {
   data() {
-    return {
-
-    };
+    return {};
   },
   components: { Header, Main, Footer },
-
-  methods: {
-
-  }
+  methods: {}
 };
-
 </script>
 
 <template>
-
   <div class="baseBackground">
-
-
+    <div class="animated-border"></div>
     <div class="components-container">
       <Header></Header>
       <Main></Main>
       <Footer></Footer>
     </div>
-
   </div>
-
 </template>
 
 <style lang="scss" scoped>
 .baseBackground {
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image: repeating-linear-gradient(45deg,
+      green 1px,
+      rgb(34, 34, 34) 0px,
+      black 10px,
+      black 20px);
+  animation: animate-border 10s linear infinite;
+  z-index: 1;
 }
 
 .components-container {
-  height: 90%;
-  width: 90%;
-  background-image: url(/public/vite.svg);
+  position: relative;
+  z-index: 2;
+  background-color: black;
+  height: 93%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes animate-border {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
 </style>
