@@ -4,12 +4,16 @@ import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
- data() {
-  return {
-    
+  data() {
+    return {
+
+    };
+  },
+  components: { Header, Main, Footer },
+
+  methods: {
+
   }
-},
-  components: { Header, Main, Footer } 
 };
 
 </script>
